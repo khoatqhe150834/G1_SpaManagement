@@ -1,0 +1,4 @@
+com\spa\resources\JakartaEE10Resource.class
+com\spa\dao\BaseDAO.class
+com\spa\JakartaRestConfiguration.class
+com\spa\db\DBContext.class
