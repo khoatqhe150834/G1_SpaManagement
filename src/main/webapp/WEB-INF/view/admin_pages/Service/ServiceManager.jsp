@@ -1,0 +1,311 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Services - Admin Dashboard</title>
+        <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16">
+        <jsp:include page="/WEB-INF/view/common/admin/stylesheet.jsp" />
+
+        <style>
+            .limit-description {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-height: 4.8em;
+                min-width: 0;
+                width: 100%;
+                line-height: 1.6em;
+                word-break: break-word;
+                white-space: normal;
+            }
+
+            .service-img-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 70px;
+            }
+
+            .service-img {
+                width: 64px;
+                height: 64px;
+                object-fit: cover;
+                border-radius: 12px;
+                border: 1px solid #e0e0e0;
+                background: #fafafa;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            }
+
+            .rating-stars {
+                color: #ffc107;
+            }
+
+            .rating-stars .far {
+                color: #e0e0e0;
+            }
+
+            @media (min-width: 1024px) {
+                .dashboard-main-body,
+                .card-body,
+                .table-responsive {
+                    overflow-x: visible !important;
+                    max-width: 100% !important;
+                }
+                .table {
+                    width: 100% !important;
+                    min-width: 900px;
+                    table-layout: auto !important;
+                }
+            }
+
+            .table td, .table th {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 220px;
+            }
+            .table td.limit-description {
+                white-space: normal;
+                max-width: 350px;
+            }
+        </style>
+    </head>
+    <body>
+        <jsp:include page="/WEB-INF/view/common/admin/sidebar.jsp" />
+        <jsp:include page="/WEB-INF/view/common/admin/header.jsp" />
+
+        <div class="dashboard-main-body">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-24">
+                <h6 class="fw-semibold mb-0">Danh Sách Dịch Vụ</h6>
+                <ul class="d-flex align-items-center gap-2">
+                    <li class="fw-medium">
+                        <a href="index.html" class="d-flex align-items-center gap-1 hover-text-primary">
+                            <iconify-icon icon="solar:home-smile-angle-outline" class="icon text-lg"></iconify-icon>
+                            Trang Chủ
+                        </a>
+                    </li>
+                    <li>-</li>
+                    <li class="fw-medium">Danh Sách Dịch Vụ</li>
+                </ul>
+            </div>
+
+            <div class="card h-100 p-0 radius-12">
+                <div class="card-header border-bottom bg-base py-16 px-24 d-flex align-items-center flex-wrap gap-3 justify-content-between">
+                    <div class="d-flex align-items-center flex-wrap gap-3">
+                        <form class="navbar-search d-flex gap-2 align-items-center" method="get" action="service">
+                            <input type="text" class="bg-base h-40-px w-auto" name="keyword" placeholder="Tìm kiếm" value="${keyword}">
+                            <select class="form-select form-select-sm w-auto ps-12 py-6 radius-12 h-40-px" name="status">
+                                <option value="">Trạng Thái</option>
+                                <option value="active" ${status == 'active' ? 'selected' : ''}>Đang Hoạt Động</option>
+                                <option value="inactive" ${status == 'inactive' ? 'selected' : ''}>Không Hoạt Động</option>
+                            </select>
+                            <input type="hidden" name="service" value="searchByKeywordAndStatus">
+                            <button type="submit" class="btn btn-primary h-40-px radius-12">Tìm Kiếm</button>
+                        </form>
+                    </div>
+                    <a href="service?service=pre-insert" class="btn btn-primary text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"> 
+                        <iconify-icon icon="ic:baseline-plus" class="icon text-xl line-height-1"></iconify-icon>
+                        Thêm Dịch Vụ Mới
+                    </a>
+                </div>
+
+                <c:if test="${not empty services}">
+                    <div class="card-body p-24">
+                        <div class="table-responsive">
+                            <table class="table bordered-table sm-table mb-0" style="table-layout: fixed;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" style="width: 5%;">Mã</th>
+                                        <th scope="col" style="width: 10%;">Hình Ảnh</th>
+                                        <th scope="col" style="width: 15%;">Tên Dịch Vụ</th>
+                                        <th scope="col" style="width: 10%;">Loại Dịch Vụ</th>
+                                        <th scope="col" style="width: 10%;">Giá</th>
+                                        <th scope="col" style="width: 10%;">Thời Gian</th>
+                                        <th scope="col" style="width: 10%;">Đánh Giá</th>
+                                        <th scope="col" style="width: 10%;">Trạng Thái</th>
+                                        <th scope="col" style="width: 10%;">Thao Tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach var="service" items="${services}">
+                                        <tr>
+                                            <td>${service.serviceId}</td>
+                                            <td class="text-center">
+                                                <div class="service-img-wrapper">
+                                                    <img src="${service.imageUrl}" alt="${service.name}" class="service-img" />
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="limit-description"
+                                                     data-bs-toggle="tooltip"
+                                                     data-bs-title="${service.name}">
+                                                    ${service.name}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="limit-description"
+                                                     data-bs-toggle="tooltip"
+                                                     data-bs-title="${service.serviceTypeId.name}">
+                                                    ${service.serviceTypeId.name}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <fmt:formatNumber value="${service.price}" type="number" maxFractionDigits="0"/> VND
+                                            </td>
+                                            <td>${service.durationMinutes} phút</td>
+                                            <td>
+                                                <div class="rating-stars">
+                                                    <c:forEach begin="1" end="5" var="i">
+                                                        <i class="fas fa-star ${i <= service.averageRating ? 'fas' : 'far'}"></i>
+                                                    </c:forEach>
+                                                    <span class="ms-1">(${service.averageRating})</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <c:choose>
+                                                    <c:when test="${service.isActive}">
+                                                        <span class="bg-success-focus text-success-600 border border-success-main px-24 py-4 radius-4 fw-medium text-sm">Đang Hoạt Động</span>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <span class="bg-neutral-200 text-neutral-600 border border-neutral-400 px-24 py-4 radius-4 fw-medium text-sm">Không Hoạt Động</span>
+                                                    </c:otherwise>
+                                                </c:choose>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="d-flex align-items-center gap-10 justify-content-center">
+
+                                                    <!-- View detail button -->
+                                                    <a href="service?service=view-detail&id=${service.serviceId}" 
+                                                       class="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
+                                                       data-bs-toggle="tooltip"
+                                                       data-bs-title="Xem chi tiết dịch vụ">
+                                                        <iconify-icon icon="majesticons:eye-line" class="icon text-xl"></iconify-icon>
+                                                    </a>
+
+                                                    <!-- Edit button -->
+                                                    <a href="service?service=pre-update&id=${service.serviceId}" 
+                                                       class="bg-success-focus text-success-600 bg-hover-success-200 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
+                                                       data-bs-toggle="tooltip"
+                                                       data-bs-title="Chỉnh sửa dịch vụ">
+                                                        <iconify-icon icon="lucide:edit" class="menu-icon"></iconify-icon>
+                                                    </a>
+
+                                                    <!-- Deactivate button -->
+                                                    <c:if test="${service.isActive}">
+                                                        <a href="service?service=deactivate&id=${service.serviceId}" 
+                                                           class="bg-danger-focus bg-hover-danger-200 text-danger-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
+                                                           data-bs-toggle="tooltip"
+                                                           data-bs-title="Vô hiệu hóa dịch vụ"
+                                                           onclick="return confirmAction('Bạn có chắc chắn muốn vô hiệu hóa dịch vụ này?')">
+                                                            <iconify-icon icon="mdi:block-helper" class="menu-icon"></iconify-icon>
+                                                        </a>
+                                                    </c:if>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="d-flex justify-content-between align-items-center mt-24">
+                            <div class="text-sm text-neutral-600">
+                                Hiển thị ${(currentPage-1)*limit + 1} đến ${currentPage*limit > totalEntries ? totalEntries : currentPage*limit} của ${totalEntries} mục
+                            </div>
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination mb-0">
+                                    <c:if test="${currentPage > 1}">
+                                        <li class="page-item">
+                                            <a class="page-link" href="service?page=${currentPage-1}" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                    </c:if>
+
+                                    <c:forEach begin="1" end="${totalPages}" var="i">
+                                        <li class="page-item ${currentPage == i ? 'active' : ''}">
+                                            <a class="page-link" href="service?page=${i}">${i}</a>
+                                        </li>
+                                    </c:forEach>
+
+                                    <c:if test="${currentPage < totalPages}">
+                                        <li class="page-item">
+                                            <a class="page-link" href="service?page=${currentPage+1}" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </c:if>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </c:if>
+            </div>
+        </div>
+
+        <jsp:include page="/WEB-INF/view/common/admin/js.jsp" />
+
+        <c:if test="${not empty toastMessage}">
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const toast = document.createElement("div");
+                    toast.textContent = "${toastMessage}";
+                    toast.className = "toast-message ${toastType eq 'success' ? 'toast-success' : 'toast-error'}";
+
+                    document.body.appendChild(toast);
+
+                    setTimeout(() => {
+                        toast.classList.add("show");
+                    }, 100);
+
+                    setTimeout(() => {
+                        toast.classList.remove("show");
+                        setTimeout(() => toast.remove(), 300);
+                    }, 4000);
+                });
+            </script>
+            <style>
+                .toast-message {
+                    position: fixed;
+                    top: 20px;
+                    right: -300px;
+                    z-index: 9999;
+                    padding: 12px 20px;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    color: white;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                    transition: right 0.3s ease;
+                    max-width: 300px;
+                }
+
+                .toast-success {
+                    background-color: #4CAF50;
+                }
+
+                .toast-error {
+                    background-color: #f44336;
+                }
+
+                .toast-message.show {
+                    right: 20px;
+                }
+            </style>
+        </c:if>
+
+        <script>
+            function confirmAction(message) {
+                return confirm(message);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+# Build directories
+target/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Git
+.git/
+
+# Maven wrapper (optional)
+.mvn/
+
+# NetBeans specific
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Test files
+src/test/
+**/test/
+
+# Documentation
+*.md
+docs/
+
+# SQL test files
+*.sql 
