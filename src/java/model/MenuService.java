@@ -69,9 +69,12 @@ public class MenuService {
 
     menuItems.add(new MenuItem("Hồ sơ của bạn", contextPath + "/customer-dashboard", "solar:user-outline"));
     menuItems.add(new MenuItem("Lịch hẹn đã đặt", contextPath + "/appointment", "solar:calendar-outline"));
+    menuItems.add(new MenuItem("QR Check-in", contextPath + "/checkin", "solar:qr-code-outline"));
     menuItems.add(new MenuItem("Lịch sử dịch vụ", contextPath + "/customer/service-history", "solar:history-outline"));
     menuItems.add(new MenuItem("Đánh giá của tôi", contextPath + "/customer/reviews", "solar:star-outline"));
     menuItems.add(new MenuItem("Cài đặt tài khoản", contextPath + "/profile/settings", "solar:settings-outline"));
+    menuItems.add(new MenuItem()); // Divider
+    menuItems.add(new MenuItem("Test QR Generator", contextPath + "/test-qr-generate", "solar:code-outline"));
     menuItems.add(new MenuItem()); // Divider
     menuItems.add(new MenuItem("Đăng xuất", contextPath + "/logout", "solar:logout-outline"));
 
@@ -144,6 +147,7 @@ public class MenuService {
     menuItems.add(new MenuItem("Hồ sơ cá nhân", contextPath + "/profile", "solar:user-outline"));
     menuItems
         .add(new MenuItem("Quản lý lịch hẹn", contextPath + "/receptionist/appointments", "solar:calendar-outline"));
+    menuItems.add(new MenuItem("Quét QR Check-in", contextPath + "/checkin/scan", "solar:camera-outline"));
     menuItems.add(
         new MenuItem("Đăng ký khách hàng", contextPath + "/receptionist/customer-registration",
             "solar:user-plus-outline"));
