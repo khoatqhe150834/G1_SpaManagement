@@ -40,7 +40,7 @@ public class AsyncEmailService {
       try {
         LOGGER.info("Starting async password reset email for: " + email);
 
-        boolean result = emailService.sendPasswordResetEmail(email, token, contextPath);
+        boolean result = emailService.sendPasswordResetEmail(email, token, null);
 
         if (result) {
           LOGGER.info("Successfully sent password reset email to: " + email);
@@ -70,7 +70,7 @@ public class AsyncEmailService {
       try {
         LOGGER.info("Starting fire-and-forget password reset email for: " + email);
 
-        boolean result = emailService.sendPasswordResetEmail(email, token, contextPath);
+        boolean result = emailService.sendPasswordResetEmail(email, token, null);
 
         if (result) {
           LOGGER.info("Successfully sent password reset email to: " + email);
@@ -104,7 +104,7 @@ public class AsyncEmailService {
       try {
         LOGGER.info("Starting callback-based password reset email for: " + email);
 
-        boolean result = emailService.sendPasswordResetEmail(email, token, contextPath);
+        boolean result = emailService.sendPasswordResetEmail(email, token, null);
 
         if (result) {
           LOGGER.info("Successfully sent password reset email to: " + email);
