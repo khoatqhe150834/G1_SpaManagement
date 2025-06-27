@@ -32,6 +32,11 @@
         <jsp:include page="/WEB-INF/view/common/home/stylesheet.jsp"></jsp:include>
 
         <style>
+            /* Ensure Inter font is used throughout the page */
+            body, h1, h2, h3, h4, h5, h6, p, span, div, a, li, td, th, label, input, textarea, select, button {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+            }
+            
             .spa-logo {
                 max-width: 200px;
                 height: auto;

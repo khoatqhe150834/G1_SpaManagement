@@ -114,12 +114,14 @@
 /*--------------------------------------------------------------
 1. GENERAL
 ---------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 body, html {
      -moz-osx-font-smoothing: grayscale;
 }
 body {
     background-color: #fff;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color:#6f6f6f;
@@ -231,7 +233,7 @@ table {
     color: #fff;
 }
 .op{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Inter', sans-serif;
 }
 .dis-block{
 	display:block;
@@ -249,7 +251,7 @@ h4,
 h5,
 h6 {
     color: #232323;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 h1 a,
 h2 a,
@@ -3011,7 +3013,7 @@ blockquote:before {
     -moz-transition: all 0.15s linear;
     -o-transition: all 0.15s linear;
 	font-weight: 500;
-	font-family: "Montserrat",sans-serif;
+	font-family: "Inter",sans-serif;
 }
 .header-nav .nav > li .sub-menu li a:hover {
     background-color: #F2F2F2;
@@ -3089,7 +3091,7 @@ blockquote:before {
     right: 0px;
     visibility: hidden;
     width: 100%;
-	font-family: Montserrat;
+	font-family: Inter;
     margin-top: 20px;
 	z-index: 9;
 }
@@ -4648,7 +4650,7 @@ blockquote:before {
     margin: 0 -4px;
     list-style: none;
 	text-transform:capitalize;
-	font-family:"Montserrat",sans-serif;
+	font-family:"Inter",sans-serif;
 }
 
 .dlab-post-meta ul li {
@@ -4824,7 +4826,7 @@ blockquote:before {
     position: relative;
 }
 .date-style-3 .post-date {
-    font-family: oswald;
+    font-family: Inter;
     text-transform: uppercase;
     position: absolute;
     padding: 8px 15px;
@@ -5214,7 +5216,7 @@ blockquote:before {
     color: #707070;
     color: rgba(51, 51, 51, 0.7);
     display: block;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 1.5;
@@ -6045,7 +6047,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 .news-box form:after {
     color: #000000;
     content: "Newslatter";
-    font-family: montserrat;
+    font-family: Inter;
     font-size: 50px;
     font-weight: 700;
     opacity: 0.05;
@@ -6076,7 +6078,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 }
 .widget-about p{
 	color: #333333;
-    font-family: montserrat;
+    font-family: Inter;
     font-size: 13px;
     line-height: 20px;
 }
@@ -6095,12 +6097,12 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 	font-weight:600;
 	font-size:13px;
 	text-transform:uppercase;
-	font-family: "Montserrat",sans-serif;
+	font-family: "Inter",sans-serif;
 	color:#000;
 }
 .widget-testimonial .testimonial-position{
 	text-transform:uppercase;
-	font-family: "Montserrat",sans-serif;
+	font-family: "Inter",sans-serif;
 	color:#888q;
 	font-size:12px;
 	font-style: inherit;
@@ -6110,7 +6112,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 }
 .widget-testimonial .testimonial-text{
 	color: #505050;
-    font-family: montserrat;
+    font-family: Inter;
     font-size: 15px;
     font-weight: 300;
     margin-bottom: 10px;
@@ -7637,7 +7639,7 @@ a,
 /* Site Filters Style */
 .site-filters.style1 li a {
     color: #000316;
-    font-family: montserrat;
+    font-family: Inter;
     font-weight: 500;
     margin: 0;
 	padding: 0 15px;
@@ -7911,7 +7913,7 @@ a,
     color: #777;
 }
 ul[class*="list-"]{
-	font-family: "Montserrat",sans-serif;
+	font-family: "Inter",sans-serif;
 	font-size:15px;
 }
 
@@ -8158,7 +8160,7 @@ ul[class*="list-"]{
     color: #3d474a;
     -webkit-border-radius: 0;
     border-radius: 0;
-	font-family: montserrat;
+	font-family: Inter;
     font-size: 15px;
     font-weight: 400;
     text-transform: capitalize;
@@ -8887,20 +8889,20 @@ ul[class*="list-"]{
     padding: 15px;
     position: relative;
 	font-size:15px;
-	font-family: "Montserrat",sans-serif;
+	font-family: "Inter",sans-serif;
 	font-weight: 400;
 }
 .testimonial-detail {
     padding: 5px;
 }
 .testimonial-name{
-    font-family: montserrat;
+    font-family: Inter;
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
 }
 .testimonial-position {
-	font-family: montserrat;
+	font-family: Inter;
     font-size: 12px;
     font-style: inherit;
     text-transform: uppercase;
@@ -9341,13 +9343,13 @@ ul[class*="list-"]{
 	font-weight: 700;
     font-size: 16px;
 	text-transform:uppercase;
-	font-family: "Montserrat",sans-serif;
+	font-family: "Inter",sans-serif;
 	color:#000;
 }
 .testimonial-9 .testimonial-position,
 .testimonial-10 .testimonial-position{
 	text-transform: capitalize;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Inter",sans-serif;
     color: #888;
     font-size: 14px;
     font-style: inherit;
@@ -9360,7 +9362,7 @@ ul[class*="list-"]{
 .testimonial-9 .testimonial-text,
 .testimonial-10 .testimonial-text{
 	color: #000;
-    font-family: montserrat;
+    font-family: Inter;
     font-size: 15px;
     font-weight: 500;
     margin-bottom: 10px;
@@ -9403,7 +9405,7 @@ ul[class*="list-"]{
 }
 .pricingtable-bx {
     color: #282a3c;
-    font-family: montserrat;
+    font-family: Inter;
     font-size: 45px;
     font-weight: 500;
 }
@@ -9471,7 +9473,7 @@ ul[class*="list-"]{
 .pricingtable-wrapper.style1 {
     border: 1px solid #f0f0f0;
     padding: 10px 10px 40px;
-	font-family: montserrat;
+	font-family: Inter;
 	margin-left:-1px;
 }
 .pricingtable-wrapper.style1 .pricingtable-icon i{
@@ -9494,7 +9496,7 @@ ul[class*="list-"]{
 	background: #ffffff none repeat scroll 0 0;
     border: 0 none;
     color: #909090;
-    font-family: montserrat;
+    font-family: Inter;
     font-weight: 400;
     padding: 8px 0;
     text-align: left;
@@ -9602,7 +9604,7 @@ ul[class*="list-"]{
 /*== >Alert box =====*/
 
 .alert{
-	font-family: montserrat;
+	font-family: Inter;
 	border-radius: 4px;
 	padding: 15px 20px;
 }
@@ -10630,7 +10632,7 @@ ul[class*="list-"]{
 .content-box-head{
 	border-radius: 50px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-    font-family: "Open Sans",sans-serif;
+    font-family: "Inter",sans-serif;
     margin-bottom: 20px;
     margin-top: -46px;
     padding: 12px 0;
@@ -10667,7 +10669,7 @@ ul[class*="list-"]{
     color: #767676;
     padding: 8px 14px;
     font-weight: 400;
-	font-family: montserrat;
+	font-family: Inter;
     font-size: 14px;
 }
 .pagination > li > a:hover,
@@ -12064,7 +12066,7 @@ ol.commentlist li .star-rating {
 	opacity: 0.4;
 }
 .item-price {
-	font-family: open sans;
+	font-family: Inter;
     font-size: 18px;
     font-weight: 600;
 }
@@ -12715,7 +12717,7 @@ ol.commentlist li .star-rating {
 }
 .shop-categories .acod-head a.collapsed:after,
 .shop-categories .acod-head a:after{
-	font-family: open sans;
+	font-family: Inter;
 	font-weight: 700;
 	color:#000;
 	font-size: 18px;

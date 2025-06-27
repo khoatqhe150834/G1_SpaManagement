@@ -433,20 +433,20 @@ button:focus {
     margin-bottom: 10px;
 }
 .about-hair-content h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 60px;
     line-height: 70px;
 }
 .about-hair-content p {
     font-size: 16px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     color: #000;
     line-height: 28px;
     margin-bottom: 50px;
 }
 .site-button-link.line-link {
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -512,7 +512,7 @@ button:focus {
 }
 .about-hair-bx h2 {
     font-size: 45px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     color: #000;
     line-height: 55px;
     margin-bottom: 30px;
@@ -562,7 +562,7 @@ button:focus {
     margin-bottom: 10px;
 }
 .hair-head h2 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 60px;
     line-height: 70px;
 }
@@ -604,7 +604,7 @@ button:focus {
     box-shadow: 0 0 0 3px #b1a684, 10px 10px 0 5px #efe6c4;
 }
 .hair-membership {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 .hair-membership .pricingtable-title {
     border-bottom: 1px solid #e9e9e9;
@@ -629,7 +629,7 @@ button:focus {
 .hair-membership .pricingtable-features li {
     font-size: 14px;
     color: #000;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 .hair-membership .pricingtable-title.bg-primary h2 {
     color: #fff;
@@ -753,7 +753,7 @@ button:focus {
 .spa-about-content p {
     font-size: 16px;
     color: #656669;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 30px;
     margin-bottom: 70px;
 }
@@ -788,7 +788,7 @@ button:focus {
     padding-left: 20px;
 }
 .spa-price-tbl li .spa-price-content p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     color: #0f1b48;
     margin: 0;
@@ -834,7 +834,7 @@ button:focus {
 .spa-our-portfolio .overlay-bx .spa-port-bx p {
     color: #0f1b48;
     font-size: 16px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 10px;
 }
 .spa-ser-bx {
@@ -905,7 +905,7 @@ button:focus {
     color: #0f1b48;
 }
 .spa-footer.footer-white {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 .bridal-head h2 {
     font-size: 60px;
@@ -981,7 +981,7 @@ button:focus {
 .dlab-media-info p {
     font-size: 14px;
     color: #fff;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     margin-bottom: 0;
 }
 .bridal-footer .footer-top {
@@ -995,7 +995,7 @@ button:focus {
     color: #000;
 }
 .bridal-footer.footer-white {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 .bridal-price {
     background-color: #fffdf8;
@@ -1201,7 +1201,7 @@ button:focus {
 .bridal-portfolio .overlay-bx .spa-port-bx p {
     color: #fff;
     font-size: 16px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 10px;
 }
 .bridal-portfolio .overlay-bx .spa-port-bx .check-km {
@@ -1364,7 +1364,7 @@ button:focus {
 .check-tbl .product-item-name,
 .check-tbl .product-item-price,
 .woo-entry .tabs-site-button .nav-tabs li a {
-    font-family: "Lato", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 .woo-entry .dlab-post-title .post-title {
     margin-bottom: 15px;

@@ -210,7 +210,7 @@
                     data-paddingleft="[0,0,0,0]"
                     style="
                       z-index: 5;
-                      font-family: Open Sans;
+                      font-family: Inter;
                       background-color: rgba(0, 0, 0, 0.15);
                       background-image: url(${pageContext.request.contextPath}/assets/home/images/background/bg6.png);
                       background-size: 100%;
@@ -278,7 +278,7 @@
                       z-index: 7;
                       white-space: normal;
                       color: #fff;
-                      font-family: 'Montserrat', sans-serif;
+                      font-family: 'Inter', sans-serif;
                       border-width: 0px;
                       text-transform: uppercase;
                       font-weight: 600;
@@ -313,7 +313,7 @@
                       z-index: 7;
                       white-space: normal;
                       color: #fff;
-                      font-family: 'Montserrat', sans-serif;
+                      font-family: 'Inter', sans-serif;
                       border-width: 0px;
                       text-transform: uppercase;
                       font-weight: 600;
